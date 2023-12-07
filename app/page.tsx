@@ -12,7 +12,7 @@ interface HomeProps {
   };
 }
 
-const Home: React.FC<HomeProps> = async ({ searchParams }) => {
+const Home = async ({ searchParams }: HomeProps) => {
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || "",
     year: searchParams.year || 2022,
